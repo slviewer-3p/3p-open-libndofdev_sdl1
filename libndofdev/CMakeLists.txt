@@ -7,7 +7,7 @@ project(libndofdev)
 include_directories( include/ packages/include/ )
 
 SET(CMAKE_BUILD_TYPE "Release")
-SET(LIBRARY_OUTPUT_PATH "lib" )
+SET(LIBRARY_OUTPUT_PATH "lib/release/" )
 SET(EXECUTABLE_OUTPUT_PATH "bin" )
 
 
