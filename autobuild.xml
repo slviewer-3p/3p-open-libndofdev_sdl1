@@ -73,9 +73,9 @@
           <key>manifest</key>
           <array>
             <string>include/*.h</string>
-            <string>lib/*.a</string>
             <string>CMakeLists.txt</string>
             <string>LICENSES/libndofdev.txt</string>
+            <string>lib/release/*.a</string>
           </array>
           <key>name</key>
           <string>linux</string>
