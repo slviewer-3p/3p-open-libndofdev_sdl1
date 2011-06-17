@@ -6,14 +6,16 @@ project(libndofdev)
 
 include_directories( include/ packages/include/ )
 
-SET(CMAKE_BUILD_TYPE "Release")
 SET(LIBRARY_OUTPUT_PATH "lib/release/" )
 SET(EXECUTABLE_OUTPUT_PATH "bin" )
 
-
 if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
 
-    ADD_DEFINITIONS("-m32 -pipe")
+    if (WORD_SIZE EQUAL 32)
+        ADD_DEFINITIONS("-m32 -pipe")
+    elseif (WORD_SIZE EQUAL 64)
+        ADD_DEFINITIONS("-m64 -pipe")
+    endif (WORD_SIZE EQUAL 32)
 
     set(libndofdev_SOURCE_FILES
         ndofdev.c
@@ -25,9 +27,9 @@ if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
     )
     
 elseif(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
-    message(FATAL_ERROR "Windows configuration not implemented.") 
+    message(FATAL_ERROR "Windows configuration not implemented. Use the 3DConnexion library located at http://bitbucket.org/lindenlab/3p-libndofdev  ") 
 elseif(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-    message(FATAL_ERROR "Darwin configuration not implemented.") 
+    message(FATAL_ERROR "Darwin configuration not implemented. Use the 3DConnexion library located at http://bitbucket.org/lindenlab/3p-libndofdev ") 
 endif()
 
 set_source_files_properties(${libndofdev_HEADER_FILES} PROPERTIES HEADER_FILE_ONLY TRUE)

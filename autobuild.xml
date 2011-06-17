@@ -57,12 +57,13 @@
               </map>
               <key>configure</key>
               <map>
-                <key>arguments</key>
-                <array>
-                  <string>.</string>
-                </array>
                 <key>command</key>
                 <string>cmake</string>
+                <key>options</key>
+                <array>
+                  <string>-DWORD_SIZE:STRING=32</string>
+                  <string>-DCMAKE_BUILD_TYPE:STRING=Release</string>
+                </array>
               </map>
               <key>default</key>
               <string>true</string>
