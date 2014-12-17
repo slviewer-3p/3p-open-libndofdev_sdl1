@@ -22,9 +22,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>5b191ad9d96627a0bb5b90377563e29b</string>
+              <string>459cdc8d7c19a8025f98f61db95622ff</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/sdl_3p-update-sdl/rev/295310/arch/Linux/installer/SDL-1.2.15-linux-295310.tar.bz2</string>
+              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/hg/repo/sdl_3p-update-sdl/rev/297546/arch/Linux/installer/SDL-1.2.15-linux-297546.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux</string>
