@@ -45,7 +45,7 @@
       <key>license_file</key>
       <string>LICENSES/libndofdev.txt</string>
       <key>name</key>
-      <string>libndofdev</string>
+      <string>open-libndofdev</string>
       <key>platforms</key>
       <map>
         <key>linux</key>
