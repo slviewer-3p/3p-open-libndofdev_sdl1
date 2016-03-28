@@ -58,18 +58,12 @@
             <map>
               <key>build</key>
               <map>
-                <key>command</key>
-                <string>make</string>
-              </map>
-              <key>configure</key>
-              <map>
-                <key>command</key>
-                <string>cmake</string>
-                <key>options</key>
+                <key>arguments</key>
                 <array>
-                  <string>-DWORD_SIZE:STRING=32</string>
-                  <string>-DCMAKE_BUILD_TYPE:STRING=Release</string>
+                  <string>../build-cmd.sh</string>
                 </array>
+                <key>command</key>
+                <string>bash</string>
               </map>
               <key>default</key>
               <string>true</string>
@@ -89,7 +83,7 @@
         </map>
       </map>
       <key>version_file</key>
-      <string>../VERSION.txt</string>
+      <string>VERSION.txt</string>
     </map>
     <key>type</key>
     <string>autobuild</string>
