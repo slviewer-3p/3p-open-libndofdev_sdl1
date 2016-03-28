@@ -58,9 +58,4 @@ ${repo_url:+ -- try ${repo_url%-linux}}"
     ;;
 esac
 
-mkdir -p "$stage/include/"
-cp "$TOP/$SOURCE_DIR/src/ndofdev_external.h" "$stage/include/"
-mkdir -p "$stage/LICENSES"
-cp -v "$TOP/$SOURCE_DIR/COPYING"  "$stage/LICENSES/$PROJECT.txt"
-
 pass
