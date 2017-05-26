@@ -29,9 +29,14 @@ fi
 stage="$(pwd)"
 
 # load autobuild provided shell functions and variables
-source_environment_tempfile="$stage/source_environment.sh"
-"$autobuild" source_environment > "$source_environment_tempfile"
-. "$source_environment_tempfile"
+"$autobuild" --quiet source_environment > "$build_log_dir/source_environment"
+begin_section "dump source environment commands"
+cat "$build_log_dir/source_environment"
+end_section "dump source environment commands"
+
+begin_section "execute source environment commands"
+. "$build_log_dir/source_environment"
+end_section "execute source environment commands"
 
 build=${AUTOBUILD_BUILD_ID:=0}
 echo "${VERSION}.${build}" > "${stage}/VERSION.txt"
