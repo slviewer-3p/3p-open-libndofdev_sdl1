@@ -26,8 +26,7 @@ else
     autobuild="$AUTOBUILD"
 fi
 
-top="$(pwd)"
-stage="$top"/stage
+stage="$(pwd)"
 
 "$autobuild" source_environment > "$stage/variables_setup.sh" || exit 1
 . "$stage/variables_setup.sh"
