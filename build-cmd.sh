@@ -26,43 +26,12 @@ else
     autobuild="$AUTOBUILD"
 fi
 
-stage="$(pwd)"
+top="$(pwd)"
+stage="$top"/stage
 
-################################################################
-# Start of the actual script
-################################################################
+"$autobuild" source_environment > "$stage/variables_setup.sh" || exit 1
+. "$stage/variables_setup.sh"
 
-# Check to see if we were invoked from the master buildscripts wrapper, if not, fail
-if [ "x${BUILDSCRIPTS_SUPPORT_FUNCTIONS}" = x ]
-then
-    echo "This script relies on being run by the master Linden Lab buildscripts" 1>&2
-    exit 1
-fi
-
-initialize_build # provided by master buildscripts build.sh
-
-begin_section "autobuild initialize"
-# ensure AUTOBUILD is in native path form for child processes
-AUTOBUILD="$(native_path "$AUTOBUILD")"
-# set "$autobuild" to cygwin path form for use locally in this script
-autobuild="$(shell_path "$AUTOBUILD")"
-if [ ! -x "$autobuild" ]
-then
-  record_failure "AUTOBUILD not executable: '$autobuild'"
-  exit 1
-fi
-
-# load autobuild provided shell functions and variables
-"$autobuild" --quiet source_environment > "$build_log_dir/source_environment"
-begin_section "dump source environment commands"
-cat "$build_log_dir/source_environment"
-end_section "dump source environment commands"
-
-begin_section "execute source environment commands"
-. "$build_log_dir/source_environment"
-end_section "execute source environment commands"
-
-end_section "autobuild initialize"
 
 build=${AUTOBUILD_BUILD_ID:=0}
 echo "${VERSION}.${build}" > "${stage}/VERSION.txt"
