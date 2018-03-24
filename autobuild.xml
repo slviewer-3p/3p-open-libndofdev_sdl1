@@ -17,7 +17,7 @@
         <string>SDL</string>
         <key>platforms</key>
         <map>
-          <key>linux</key>
+          <key>linux64</key>
           <map>
             <key>archive</key>
             <map>
@@ -27,7 +27,7 @@
               <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/1103/2554/SDL-1.2.15-linux64-501092.tar.bz2</string>
             </map>
             <key>name</key>
-            <string>linux</string>
+            <string>linux64</string>
           </map>
         </map>
         <key>version</key>
