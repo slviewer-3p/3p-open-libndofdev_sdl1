@@ -34,9 +34,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>7ea2df03bfc35c06acf23dd9e734adac</string>
+              <string>64c1dff0e19792acec7fd32556bf4d7b</string>
               <key>url</key>
-              <string>http://automated-builds-secondlife-com.s3.amazonaws.com/ct2/1103/2554/SDL-1.2.15-linux64-501092.tar.bz2</string>
+              <string>http://192.168.1.115/dev/pkg/SDL-1.2.15-linux64-181411635.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -63,7 +63,7 @@
         <key>linux</key>
         <map>
           <key>build_directory</key>
-          <string>libndofdev</string>
+          <string>stage</string>
           <key>configurations</key>
           <map>
             <key>Release</key>
@@ -86,7 +86,6 @@
           <key>manifest</key>
           <array>
             <string>include/*.h</string>
-            <string>CMakeLists.txt</string>
             <string>LICENSES/libndofdev.txt</string>
             <string>lib/release/*.a</string>
           </array>
