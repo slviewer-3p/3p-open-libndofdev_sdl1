@@ -34,9 +34,9 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>64c1dff0e19792acec7fd32556bf4d7b</string>
+              <string>51bcf56b8643055b55798b1c0271e063</string>
               <key>url</key>
-              <string>http://192.168.1.115/dev/pkg/SDL-1.2.15-linux64-181411635.tar.bz2</string>
+              <string>http://erebus//dev/fractal/pkg/SDL-1.2.15-linux64-20220910.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -55,7 +55,7 @@
       <key>license</key>
       <string>BSD</string>
       <key>license_file</key>
-      <string>LICENSES/libndofdev.txt</string>
+      <string>LICENSES/libndofdev_sdl1.txt</string>
       <key>name</key>
       <string>open-libndofdev_sdl1</string>
       <key>platforms</key>
@@ -85,8 +85,8 @@
           </map>
           <key>manifest</key>
           <array>
-            <string>include/*.h</string>
-            <string>LICENSES/libndofdev.txt</string>
+            <string>include/*</string>
+            <string>LICENSES/libndofdev_sdl1.txt</string>
             <string>lib/release/*.a</string>
           </array>
           <key>name</key>

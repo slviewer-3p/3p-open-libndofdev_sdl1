@@ -35,8 +35,8 @@ endif()
 set_source_files_properties(${libndofdev_HEADER_FILES} PROPERTIES HEADER_FILE_ONLY TRUE)
 list(APPEND libndofdev_SOURCE_FILES ${libndofdev_HEADER_FILES})
 
-add_library (ndofdev STATIC ${libndofdev_SOURCE_FILES})
+add_library (ndofdev_sdl1 STATIC ${libndofdev_SOURCE_FILES})
 
-target_link_libraries(ndofdev
+target_link_libraries(ndofdev_sdl1
     ${libndofdev_LIBRARIES}
 )
