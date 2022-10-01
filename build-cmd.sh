@@ -45,7 +45,7 @@ case "$AUTOBUILD_PLATFORM" in
 -- try $(hg paths default | sed -E 's/open-(libndofdev)/\1/')" 1>&2 ; exit 1
     ;;
     linux*)
-        opts="-DTARGET_OS_LINUX -m$AUTOBUILD_ADDRSIZE $LL_BUILD_RELEASE"
+        opts="-DTARGET_OS_LINUX ${AUTOBUILD_GCC_ARCH} $LL_BUILD_RELEASE"
         cmake ../libndofdev -DCMAKE_CXX_FLAGS="$opts" -DCMAKE_C_FLAGS="$opts" \
             -DCMAKE_OSX_ARCHITECTURES="$AUTOBUILD_CONFIGURE_ARCH" \
             -DWORD_SIZE:STRING=$AUTOBUILD_ADDRSIZE \
