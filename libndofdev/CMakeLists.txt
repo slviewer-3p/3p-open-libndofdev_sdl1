@@ -11,11 +11,7 @@ SET(EXECUTABLE_OUTPUT_PATH "bin" )
 
 if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
 
-    if (WORD_SIZE EQUAL 32)
-        ADD_DEFINITIONS("-m32 -pipe")
-    elseif (WORD_SIZE EQUAL 64)
-        ADD_DEFINITIONS("-m64 -pipe")
-    endif (WORD_SIZE EQUAL 32)
+    ADD_DEFINITIONS("-pipe")
 
     set(libndofdev_SOURCE_FILES
         ndofdev.c
